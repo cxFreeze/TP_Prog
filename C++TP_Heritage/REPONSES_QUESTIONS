@@ -1,0 +1,23 @@
+Q1:
+Les methodes virtuelles seront ou pas redefinies dans les classes heritant de Vehicule.
+C'est le cas des methodes afficher, calculerTarif et du destructeur.
+
+Les methodes afficher et calculerTarif sont virtuelles pures, elles doivent obligatoirement etre redefinies dans les classes filles pour ne pas etre une classe abstraite.
+
+Pour rendre polymorphe l'operateur d'affichage << il faut appeler la methode afficher() car elle on la redefinie dans chaque classe fille.
+
+Q2:
+Le conteneur doit contenir des pointeurs sur Vehicule car c'est une classe abstraite. Et en initialisant un conteneur d'elements de type Vehicule, le constructeur par defaut est appele et donc erreur de compilation.
+En plus, tous les objets heritants de Vehicule peuvent etre pointes.
+
+Q3:
+On va utuliser une methode clone() qui appelle le constructeur de copie.
+
+Q4:
+Les adresses des elements du conteneur comme l'operateur < n'est pas redefinie.
+
+Q5:
+  /** trier le ferry selon l’ordre defini par le comparateur
+	@param TComparateur : type du comparateur
+  */
+  template <class TComparateur> void trier(TComparateur comparateur = TComparateur());
